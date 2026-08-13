@@ -6,10 +6,33 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Agency Agents 中文目錄">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <style>
+    #install-btn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      background: #42b983;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      font-weight: bold;
+    }
+    #install-btn:hover {
+      background: #33a06f;
+    }
+  </style>
 </head>
 <body>
   <div id="app">正在載入中...</div>
+  <button id="install-btn" onclick="installApp()">📦 一鍵安裝成桌面 APP</button>
   <script>
     window.$docsify = {
       name: '繁體中文 AI 代理',
@@ -17,6 +40,31 @@
       auto2top: true,
       loadSidebar: false,
       homepage: 'README.md'
+    }
+
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      document.getElementById('install-btn').style.display = 'block';
+    });
+
+    function installApp() {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            document.getElementById('install-btn').style.display = 'none';
+          }
+          deferredPrompt = null;
+        });
+      }
+    }
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js');
+      });
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
