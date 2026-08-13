@@ -4,65 +4,12 @@
 
 > **268 個即插即用的 AI 專家角色** — 覆蓋工程、設計、營銷、產品、遊戲、安全、GIS、金融等 20 個部門。不是通用提示詞模板，每個智能體都有獨立的人設、專業流程和可交付成果。支持 Claude Code / Cursor / Copilot 等 18 種 AI 編程工具。
 
-[agency-agents](https://github.com/msitarzewski/agency-agents) 的中文社區版。在完整翻譯上游的基礎上，新增了 50 箇中國市場原創智能體（小紅書、抖音、微信、B站、飛書、釘釘等平臺運營，以及跨境電商、政務ToG、醫療合規、Qt 工業上位機、機械設計、畜禽養殖檔案核對等垂直領域）。
-
-想更好地用起來，或想給團隊打造統一的智能體工作臺？[下載桌面客戶端](https://github.com/jnMetaCode/agency-orchestrator/releases/latest)（原生 App，免裝 Node，macOS / Windows / Linux），或在線體驗 [ao.aiolaola.com/experts](https://ao.aiolaola.com/experts)。
-
-[![GitHub stars](https://img.shields.io/github/stars/jnMetaCode/agency-agents-zh?style=social)](https://github.com/jnMetaCode/agency-agents-zh)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)
-[![npm](https://img.shields.io/npm/v/agency-agents-zh?color=cb3837&logo=npm)](https://www.npmjs.com/package/agency-agents-zh)
-[![桌面客戶端](https://img.shields.io/badge/桌面客戶端-macOS%20%7C%20Windows%20%7C%20Linux-2563eb?logo=github)](https://github.com/jnMetaCode/agency-orchestrator/releases/latest)
-[![在線體驗](https://img.shields.io/badge/在線體驗-ao.aiolaola.com-8b5cf6)](https://ao.aiolaola.com/experts)
-
-
 ### 📊 項目規模
 
 | 🤖 AI 智能體 | 🌏 英文版翻譯 | 🇨🇳 中國市場原創 | 🧠 支持工具 | 🏢 部門 |
 |:---:|:---:|:---:|:---:|:---:|
 | **268** | **215** | **53** | **18 種** | **20 個** |
 
-> 📖 **官方配套課程** → [AI 專家團隊實戰](https://aiolaola.com/course/ai-agency?utm_source=github&utm_campaign=agents)（33 節，免費）：手把手把這倉 268 位專家用成一支團隊——單兵點名、自動組隊、一人公司全流程，桌面端零代碼教學。另有 [從零學會 AI 編程](https://aiolaola.com/?utm_source=github&utm_campaign=agents)（180 節）＋ [從零構建 AI 智能體](https://aiolaola.com/course/ai-agent?utm_source=github&utm_campaign=agents)（40 節）
->
-> 🌍 Also available in [English](https://aiolaola.com/en?utm_source=github&utm_campaign=agents) · [日本語](https://aiolaola.com/ja?utm_source=github&utm_campaign=agents) · [Español](https://aiolaola.com/es?utm_source=github&utm_campaign=agents) · [한국어](https://aiolaola.com/ko?utm_source=github&utm_campaign=agents) · [繁體中文](https://aiolaola.com/zh-Hant?utm_source=github&utm_campaign=agents)
-
----
-
-## 🚀 讓角色庫跑起來 · Agency Orchestrator
-
-> 一句話，讓多個 AI 專家自動組隊協作，幾分鐘交付完整方案。
-
-```bash
-npm install -g agency-orchestrator
-ao compose "幫我寫一篇關於 AI Agent 的深度分析文章" --run
-```
-
-**不想用命令行？** [**下載桌面客戶端**](https://github.com/jnMetaCode/agency-orchestrator/releases/latest)（原生 App，免裝 Node，macOS / Windows / Linux），或在線體驗 [ao.aiolaola.com/experts](https://ao.aiolaola.com/experts)。
-
-零代碼編排 · DAG 並行 · 斷點續跑 · 10 種大模型（7 種免 key）· 現成模板開箱即用 —— [**瞭解 Agency Orchestrator →**](https://github.com/jnMetaCode/agency-orchestrator)
-
----
-
-## 🖼️ 在線瀏覽全部專家（無需安裝）
-
-搜索 / 按部門篩選 / 查看與**複製每位專家的完整提示詞** —— 全部 268 位，直接在瀏覽器裡看：
-
-<p align="center">
-  <a href="https://ao.aiolaola.com/experts">
-    <img src="assets/experts-gallery.png" alt="agency-agents 專家庫在線瀏覽" width="640"><br/>
-    <strong>🔗 在線專家庫 ao.aiolaola.com/experts →</strong>
-  </a>
-</p>
-
----
-
-## 這是什麼？
-
-一套**開箱即用的 AI 角色庫**。每個智能體都有明確的身份定義、關鍵規則、工作流程和交付物，安裝到你的 AI 編程工具後用自然語言激活。
-
-**和普通提示詞的區別**：普通提示詞告訴 AI "你是一個專家"；這裡的智能體定義了專家**怎麼思考、怎麼做事、交付什麼**。例如[安全工程師](engineering/engineering-security-engineer.md)會按 OWASP Top 10 逐項審查代碼，[小紅書運營專家](marketing/marketing-xiaohongshu-operator.md)會輸出完整的種草筆記策略和達人合作方案。
-
----
 
 ## 快速開始
 
@@ -495,7 +442,6 @@ cp -r marketing/*.md ~/.claude/agents/
 | Phase 0-6 Playbooks | [發現](strategy/playbooks/phase-0-discovery.md) · [策略](strategy/playbooks/phase-1-strategy.md) · [基礎](strategy/playbooks/phase-2-foundation.md) · [構建](strategy/playbooks/phase-3-build.md) · [加固](strategy/playbooks/phase-4-hardening.md) · [上線](strategy/playbooks/phase-5-launch.md) · [運營](strategy/playbooks/phase-6-operate.md) |
 | 場景 Runbook | [創業 MVP](strategy/runbooks/scenario-startup-mvp.md) · [企業功能](strategy/runbooks/scenario-enterprise-feature.md) · [事故響應](strategy/runbooks/scenario-incident-response.md) · [營銷活動](strategy/runbooks/scenario-marketing-campaign.md) |
 
----
 
 ## 工具集成
 
@@ -913,35 +859,6 @@ DEERFLOW_SKILLS_DIR=/path/to/deerflow/skills/custom ./scripts/install.sh --tool 
 3. **品牌守護者** — 品牌調性把關
 4. **數據分析師** — 追蹤投放數據、出復盤報告
 5. **增長黑客** — 設計轉化和裂變路徑
-
----
-
-## 貢獻
-
-歡迎參與！翻譯智能體、改進內容、新增中國平臺智能體都行。詳見 [CONTRIBUTING.md](CONTRIBUTING.md)。
-
----
-
-## 交流 · Community
-
-<table>
-<tr>
-<td width="170" align="center">
-<img src="assets/qr-wechat.jpg" width="150" alt="微信公眾號 AI不止語 二維碼"><br>
-<sub>微信掃碼關注</sub>
-</td>
-<td>
-
-微信公眾號 **「AI不止語」**（微信搜索 `AI_BuZhiYu`）— 技術問答 · 項目更新 · 實戰文章
-
-| 渠道 | 加入方式 |
-|------|---------|
-| QQ 2群 | [點擊加入](https://qm.qq.com/q/EeNQA9xCxy)（群號 1071280067） |
-| 微信群 | 關注公眾號後回覆「群」獲取入群方式 |
-
-</td>
-</tr>
-</table>
 
 ---
 
